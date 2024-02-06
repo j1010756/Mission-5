@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+
+
+<!--
+    form to let user enter the number of hours they need for me,
+    min set at one to make sure the number is positive
+-->
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+    <!-- title for the form -->
+    <h2>Enter the Number of Hours You Need</h2>
+    <br><br>
+
+    <!-- form for calculating cost -->
+    <form>
+        <!-- hours input -->
+        <label for="hours">Hours:</label>
+        <input type="number" id="hours" name="hours" min="0" required><br><br>
+
+        <!-- hourly rate box -->
+        <label for="hourlyRate">Hourly Rate:</label>
+        <input type="text" id="hourlyRate" name="hourlyRate" value="$75" readonly><br><br>
+
+        <!-- calculate button -->
+        <button type="button" id="calculate">Calculate</button> <br><br>
+
+        <!-- output for total cost -->
+        <label for="output">Total Cost:</label>
+        <input type="text" id="output" name="output" value="$0" readonly />
+    </form>
+</div>
+
+<script src="~/js/site.js"></script>
